@@ -1,13 +1,13 @@
 class Solution:
     def differenceOfSums(self, n: int, m: int) -> int:
-        div=[]
-        notdiv=[]
+        div=0
+        notdiv=0
         for i in range(1,n+1):
             if i%m==0:
-                div.append(i)
+                div+=i
             else:
-                notdiv.append(i)
-        total=sum(notdiv)-sum(div)
-        return total
+                notdiv+=i
+        
+        return notdiv-div 
 
         
