@@ -6,7 +6,7 @@ class Solution:
             if total==target:
                 res.append(path[:])
                 return 
-            if total>target:
+            if total>target or start>=len(candidates):
                 return 
             
             for i in range(start,len(candidates)):
